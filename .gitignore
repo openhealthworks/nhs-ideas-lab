@@ -1,2 +1,2 @@
-*/.DS_Store
-app/tmp/
+*.DS_Store
+app/tmp/*
