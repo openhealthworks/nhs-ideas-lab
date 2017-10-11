@@ -1,0 +1,252 @@
+/*----------------------- OHW ----------------------*/
+@import "_ohwvariables";
+
+.navbar {
+  font-family: 'Lato', sans-serif;
+  background-color: $background-dark !important;
+
+  .xv-menuwrapper .dl-menu > li > a {
+    font-weight: bold !important;
+    font-size: 15px !important;
+    color: $nav-title;
+    padding: 0 9px;
+  }
+  .xv-menuwrapper .dl-menu > li > .btn {
+    background-color: $contrast-1 !important;
+  }
+}
+
+.badge {
+  font-family: 'Lato', sans-serif !important;
+}
+
+.badge-success {
+  font-weight: bold !important;
+  background-color: $bright !important;
+}
+
+.btn-primary {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: light !important;
+  background-color: $contrast-1 !important;
+  letter-spacing: 3px;  
+}
+
+.hero-video {
+  h1 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: lighter !important;
+  }
+  h3 {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: bold !important;
+    color: $title-3 !important;    
+  }
+}
+
+.counter > div {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: lighter !important;
+  color: white;
+  background-color: $title-1 !important; 
+  text-transform: uppercase;
+}
+
+.service-blocks {
+h1 {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 700;
+  color: $title-4;
+  font-size: 3em;
+  line-height: 0em;
+  letter-spacing: 4px;
+  .big-name-bracket {
+    vertical-align: middle;
+    color: $link !important;
+    font-weight: 500;
+    font-size: 4em;
+  }
+}
+ 
+  h2 {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 36px;
+    font-weight: 500 !important;
+    color: $title-1;    
+  }
+  .service-block .service-content {
+    h3 {
+      font-family: 'Lato', sans-serif !important;
+      font-size: 17px;
+      font-weight: 500 !important;
+      color: $title-4;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }  
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: $body-normal !important;   
+    font-size: 1.2em;
+    line-height: 1.15em;
+  }
+  a {
+      color: $link;
+      font-weight: bold;
+      &:hover {
+        color: $link-hover;
+      }
+  }
+  .service-block .service-icon i {
+      color: $title-1;
+  }
+
+  .btn-primary {
+    text-transform: uppercase;
+  }
+}
+
+.testimonial {
+  background-color: $background-mid !important;
+  padding: 0 20px 60px 20px;
+  h1 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    color: $title-4;
+    font-size: 2em;
+    line-height: 0em;
+    letter-spacing: 4px;
+  }
+  a {
+    color: $link;
+    font-weight: normal;
+    &:hover {
+      color: $link-hover;
+    }
+  }
+  p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: $body-normal;   
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  h5 {
+    color: $title-4;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+}
+
+.faq {
+  background-color: $title-1;
+  h1 {
+    color: white;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 0em;
+    letter-spacing: 4px;
+  }
+  h2 {
+    color: $title-3;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 28px;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 2em;
+  }
+  .accordion {
+    padding: 5px 5px 40px 5px;
+  }
+  .card-header {
+    a {
+      color: $link;
+      font-family: 'Lato', sans-serif !important;
+      font-size: 1em;
+      font-weight: 500 !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;      
+    }
+  }
+  .card-block {
+    padding: 10px 20px;
+    background-color: $background-lightest;
+    p {
+      font-family: 'Lato', sans-serif !important;
+      color: $body-darker;
+      font-size: 1.1em;      
+      line-height: 1.5em;   
+    }
+  }
+}
+
+.contact {
+   background-color: $background-lightest;  
+   h1 {
+    color: $title-2;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 0em;
+    letter-spacing: 4px;
+  }
+}
+
+.bright {
+  background-color: $bright !important;
+  text-transform: uppercase;
+}
+.newsletter {
+  background-color: $background-mid !important;
+   h1 {
+    color: $title-2;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 0em;
+    letter-spacing: 4px;
+  }  
+  h2 {
+    color: $title-4;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    letter-spacing: -1px;    
+  }
+  p {
+    font-family: 'Lato', sans-serif !important;    
+    font-weight: 400 !important;
+    color: $body-normal;
+    font-size: 1.2em;
+  }
+}
+
+.iconList {
+  margin-left: 20px;
+}
+
+.policy-bar {
+  background-color: $background-dark !important;
+  h6 {
+    font-family: 'Lato', sans-serif !important;    
+    text-transform: uppercase;    
+    color: $nav-title;
+  }
+  .footer-links li a {
+    color: $nav-title;
+    &:hover {
+      color: $title-1;
+    }
+  }
+  p {
+    padding: 10px 0;
+    font-weight: 300 !important;
+    text-align: center !important;
+    color: $title-1;
+  }
+}
