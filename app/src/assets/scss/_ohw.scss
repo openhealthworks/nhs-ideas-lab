@@ -37,10 +37,20 @@
     font-family: 'Oswald', sans-serif !important;
     font-weight: lighter !important;
   }
-  h3 {
+  h3, h4 {
     font-family: 'Lato', sans-serif !important;
-    font-weight: bold !important;
-    color: $title-3 !important;    
+  }
+  h3 {
+    color: white !important;    
+    font-weight: 300 !important;
+    padding: 20px 0 20px 0;
+    text-align: left;
+    font-size: 2em;
+  }
+  h4 {
+    font-weight: 700 !important;
+    color: $title-3 !important; 
+    font-size: 2.5em;   
   }
 }
 
@@ -56,10 +66,10 @@
 h1 {
   font-family: 'Oswald', sans-serif !important;
   font-weight: 700;
-  color: $title-4;
+  color: $title-1;
   font-size: 3em;
   line-height: 0em;
-  letter-spacing: 4px;
+  letter-spacing: 0px;
   .big-name-bracket {
     vertical-align: middle;
     color: $link !important;
@@ -92,11 +102,12 @@ h1 {
     line-height: 1.15em;
   }
   a {
-      color: $link;
-      font-weight: bold;
-      &:hover {
-        color: $link-hover;
-      }
+    color: $link;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 900 !important;
+    &:hover {
+      color: $link-hover;
+    }
   }
   .service-block .service-icon i {
       color: $title-1;
@@ -108,15 +119,15 @@ h1 {
 }
 
 .testimonial {
-  background-color: $background-mid !important;
+  background-color: white !important;
   padding: 0 20px 60px 20px;
   h1 {
     font-family: 'Oswald', sans-serif !important;
     font-weight: 700;
-    color: $title-4;
+    color: $title-1;
     font-size: 2em;
     line-height: 0em;
-    letter-spacing: 4px;
+    letter-spacing: 0px;
   }
   a {
     color: $link;
@@ -140,8 +151,17 @@ h1 {
     letter-spacing: -1px;
   }
   .paper-block {
-    background-color: white !important;
+    background-color: $background-lightest !important;
   }
+}
+
+.supporters {
+  background-color: white !important;
+  h1 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    color: $title-1;
+  }  
 }
 
 .faq {
@@ -152,7 +172,7 @@ h1 {
     font-weight: 700;
     font-size: 3em;
     line-height: 0em;
-    letter-spacing: 4px;
+    letter-spacing: 0px;
   }
   h2 {
     color: $title-3;
@@ -188,18 +208,26 @@ h1 {
     li {
       line-height: 2em;
     }
+    a {
+      color: $link;
+      font-family: 'Lato', sans-serif !important;
+      font-weight: 900 !important;
+      &:hover {
+        color: $link-hover;
+      }
+    }
   }
 }
 
 .contact {
    background-color: $background-lightest;  
    h1 {
-    color: $title-2;
+    color: $title-1;
     font-family: 'Oswald', sans-serif !important;
     font-weight: 700;
     font-size: 3em;
     line-height: 0em;
-    letter-spacing: 4px;
+    letter-spacing: 0px;
   }
 }
 
@@ -215,13 +243,12 @@ h1 {
     font-weight: 700;
     font-size: 3em;
     line-height: 0em;
-    letter-spacing: 4px;
+    letter-spacing: 0px;
   }  
   h2 {
     color: $title-4;
     font-family: 'Oswald', sans-serif !important;
     font-weight: 400 !important;
-    text-transform: uppercase;
     letter-spacing: -1px;    
   }
   p {
@@ -243,7 +270,7 @@ h1 {
     font-family: 'Oswald', sans-serif !important !important;
     font-weight: 700;
     font-size: 3em;
-    letter-spacing: 4px ;
+    letter-spacing: 0px;
   }      
   h3 {
     font-family: 'Lato', sans-serif !important;
@@ -271,12 +298,13 @@ h1 {
     line-height: 1.5em;
   }
   a {
-      color: $link;
-      font-weight: bold;
-      &:hover {
-        color: $link-hover;
-      }
-   }  
+    color: $link;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 900 !important;
+    &:hover {
+      color: $link-hover;
+    }
+  }
 }
 
 .policy-bar {
@@ -307,3 +335,6 @@ h1 {
   }
 }
  
+ ul.iconList li:before {
+  color: $title-1;
+ }
