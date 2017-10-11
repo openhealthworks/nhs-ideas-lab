@@ -176,11 +176,14 @@ h1 {
   .card-block {
     padding: 10px 20px;
     background-color: $background-lightest;
-    p {
+    p, li {
       font-family: 'Lato', sans-serif !important;
       color: $body-darker;
       font-size: 1.1em;      
       line-height: 1.5em;   
+    }
+    li {
+      line-height: 2em;
     }
   }
 }
@@ -230,6 +233,49 @@ h1 {
   margin-left: 20px;
 }
 
+
+.policy {
+   h1 {
+    color: $title-3 !important;
+    font-family: 'Oswald', sans-serif !important !important;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 4px ;
+  }      
+  h3 {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 2.5em;
+    line-height: 3em;
+    font-weight: 500 !important;
+    color: $title-4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  h6 {
+    padding: 20px 0 10px 0;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.5em;
+    font-weight: 500 !important;
+    color: $title-4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  p, ul > li {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: $body-normal !important;   
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  a {
+      color: $link;
+      font-weight: bold;
+      &:hover {
+        color: $link-hover;
+      }
+   }  
+}
+
 .policy-bar {
   background-color: $background-dark !important;
   h6 {
@@ -243,10 +289,18 @@ h1 {
       color: $title-1;
     }
   }
+
   p {
     padding: 10px 0;
     font-weight: 300 !important;
     text-align: center !important;
     color: $title-1;
+    a {
+      color: $nav-title;
+      &:hover {
+        color: $title-1;
+      }
+    }
   }
 }
+ 
