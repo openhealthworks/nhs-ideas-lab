@@ -342,3 +342,46 @@ ul.iconList li:before {
 .section-heading-icon {
     background: none;
   }
+
+.policy {
+   h1 {
+    color: $title-3 !important;
+    font-family: 'Oswald', sans-serif !important !important;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0px;
+  }      
+  h3 {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 2.5em;
+    line-height: 3em;
+    font-weight: 500 !important;
+    color: $title-4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  h6 {
+    padding: 20px 0 10px 0;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.5em;
+    font-weight: 500 !important;
+    color: $title-4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  p, ul > li {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: $body-normal !important;   
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  a {
+    color: $link;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 900 !important;
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
