@@ -875,16 +875,18 @@
         <div class="container">
             <header>
                 <h2>Stay in touch</h2>
-                <p>We&#x2019;ll only ever email you about events in the {nhs.ideas.lab} series, and will never share your details with third parties.</p>
+                <p style="margin: 0 20%;">We&#x2019;ll only ever email you about events in the {nhs.ideas.lab} series and information about the {nhs.ideas.lab} community. We will never share your details with third parties.</p>
             </header>
             <div class="row">
                 <div class="col-lg-6 mx-md-auto">
-                    <form>
+                    <form action="https://tinyletter.com/nhsideaslab" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/nhsideaslab', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
                         <input class="form-control form-control-lg" placeholder="Email Address"
-                        type="email">
-                        <button class="icon-btn" type="submit"><i class="icon icon-rss"></i>
-                        </button>
+                        type="text" name="email" id="tlemail">
+                        <!-- <button class="icon-btn" type="submit"><i class="icon icon-rss"></i>
+                        </button> -->
                         <button class="submit subscribe btn btn-primary bright btn-lg"><i class="icon icon-envelope"></i>Subscribe Now</button>
+                        <input type="hidden" value="1" name="embed"/>
+                        <p class="p-t-10"><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></p>
                     </form>
                 </div>
             </div>
