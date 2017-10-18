@@ -1,5 +1,6 @@
 /*----------------------- OHW ----------------------*/
 @import "_ohwvariables";
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 .navbar {
   font-family: 'Lato', sans-serif;
@@ -70,11 +71,15 @@ h1 {
   font-size: 3em;
   line-height: 0em;
   letter-spacing: 0px;
+  .big-name-words {
+    font-weight: 400;
+    font-size: 1.5em;
+  }
   .big-name-bracket {
-    vertical-align: middle;
+    vertical-align: top;
     color: $link !important;
-    font-weight: 500;
-    font-size: 4em;
+    font-weight: 200;
+    font-size: 3em;
   }
 }
  
@@ -326,3 +331,11 @@ footer .social {
 ul.iconList li:before {
   color: $title-1;
  }
+
+.container {
+  z-index: -1;
+} 
+
+.section-heading-icon {
+    background: none;
+  }
