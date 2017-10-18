@@ -7,9 +7,9 @@
 
   .xv-menuwrapper .dl-menu > li > a {
     font-weight: bold !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
     color: $nav-title;
-    padding: 0 9px;
+    padding: 0 5px;
   }
   .xv-menuwrapper .dl-menu > li > .btn {
     background-color: $contrast-1 !important;
@@ -307,12 +307,17 @@ h1 {
   }
 }
 
+footer .brand img {
+  padding: 20px 0;
+  vertical-align: middle !important;
+}
 .footer-bar {
   background-color: $background-black !important;
   h6 {
     font-family: 'Lato', sans-serif !important;    
     text-transform: uppercase;    
     color: $nav-title;
+    padding: 40px 0 0 0;
   }
   .footer-links li a {
     color: $nav-title;
@@ -320,11 +325,9 @@ h1 {
       color: $title-1;
     }
   }
-
   p {
     padding: 10px 0;
     font-weight: 300 !important;
-    text-align: center !important;
     color: $body-normal;
     a {
       color: $link;
@@ -332,6 +335,13 @@ h1 {
         color: $link-hover;
       }
     }
+  }
+  img {
+    padding: 10px 0;
+    vertical-align: middle;
+  }
+  .footer-content {
+    text-align: center;
   }
 }
  
