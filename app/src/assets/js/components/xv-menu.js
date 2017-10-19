@@ -18,7 +18,9 @@ jQuery(function ($) {
             $('.paper-nav-toggle').removeClass('dl-trigger');
         }
 
-        if (($('.nav-offcanvas').length && xv_ww <= 1030) || $('.nav-offcanvas-desktop').length) {
+        var desktopWidth = 1023;
+
+        if (($('.nav-offcanvas').length && xv_ww <= desktopWidth) || $('.nav-offcanvas-desktop').length) {
             $('body').addClass('sidebar-collapse');
             $('.dl-menu').addClass("dl-menuopen");
             $('.paper-nav-toggle').removeClass('dl-trigger');
@@ -27,8 +29,7 @@ jQuery(function ($) {
             $('.nav-offcanvas .paper_menu').removeClass('main-sidebar shadow1 fixed offcanvas');
         }
 
-
-        if (xv_ww <= 1030 || $('.mini-nav').length) {
+        if (xv_ww <= desktopWidth || $('.mini-nav').length) {
             $('.responsive-menu').removeClass('xv-menuwrapper').addClass('dl-menuwrapper');
             $('.user-avatar').removeClass('pull-right');
             $('.lg-submenu').addClass("dl-submenu");
