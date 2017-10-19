@@ -385,3 +385,27 @@ ul.iconList li:before {
     }
   }
 }
+
+
+.bio-intro {
+  text-align: justify;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.bio-modal {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  h5 {
+    color: $title-4;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  } 
+  p {
+    margin: 30px 0;
+    font-weight: 400;
+  }
+}
