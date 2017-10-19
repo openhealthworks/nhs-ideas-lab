@@ -10,7 +10,7 @@ jQuery(function ($) {
                 dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
 
             if (name === '' || !IsEmail(email) || message === '') {
-                $('#valid-issue').addClass('alert-danger').html('Please Provide Valid Information').slideDown();
+                $('#valid-issue').addClass('alert-danger').html('Hmmm, something\'s not quite right. Please check your information carefully.').slideDown();
             } else {
                 $.ajax({
                     type: "POST",
@@ -18,7 +18,7 @@ jQuery(function ($) {
                     data: dataString,
                     success: function () {
                         $('#contactform').slideUp();
-                        $('#valid-issue').addClass('alert-success').html('Your message has been sent,<BR> We will contact you back with in next 24 hours.').show();
+                        $('#valid-issue').addClass('alert-success').html('Your message has been sent! We will write back as soon as we can. Thank you for getting in touch.').show();
                     }
                 });
             }
