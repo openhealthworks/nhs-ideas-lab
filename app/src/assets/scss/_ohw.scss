@@ -67,24 +67,23 @@
 }
 
 .service-blocks {
-h1 {
-  font-family: 'Oswald', sans-serif !important;
-  font-weight: 700;
-  color: $title-1;
-  font-size: 3em;
-  line-height: 0em;
-  .big-name-words {
-    font-weight: 400;
-    font-size: 1.5em;
-  }
-  .big-name-bracket {
-    vertical-align: top;
-    color: $link !important;
-    font-weight: 200;
+  h1 {
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 700;
+    color: $title-1;
     font-size: 3em;
+    line-height: 0em;
+    .big-name-words {
+      font-weight: 400;
+      font-size: 1.5em;
+    }
+    .big-name-bracket {
+      vertical-align: top;
+      color: $link !important;
+      font-weight: 200;
+      font-size: 3em;
+    }
   }
-}
- 
   h2 {
     font-family: 'Oswald', sans-serif !important;
     font-size: 2.7em;
@@ -410,3 +409,31 @@ ul.iconList li:before {
   left: 25%;
   right: 25%;
 }
+
+@include tablet-and-phone {
+  .reorder-responsive {
+    display: table;
+  }
+  .reorder-left {
+    display: table-header-group;
+    h2 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
+    .service.content {
+      text-align: left !important;
+    }
+  }
+  .reorder-right {
+    display: table-footer-group;
+  }
+  .service-blocks {
+    h2 {
+      padding-top: 60px;
+    }
+  }
+}
+
+
