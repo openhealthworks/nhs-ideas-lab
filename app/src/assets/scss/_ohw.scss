@@ -416,7 +416,7 @@ ul.iconList li:before {
   right: 25%;
 }
 
-@include tablet-and-phone {
+@include tablet-and-phone { // Basically all a massive hack
   .reorder-responsive {
     display: table;
   }
@@ -444,6 +444,12 @@ ul.iconList li:before {
   }
   .final {
     padding-bottom: 40px; // TODO HAXXXX
+  }
+  .hero-video {
+    h1 {
+      font-size: 4.5em;
+      line-height: 1.3em;
+    }
   }
 }
 
