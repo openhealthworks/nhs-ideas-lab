@@ -25,6 +25,12 @@
   font-weight: bold !important;
   background-color: $bright !important;
 }
+/* The just announced block is hidden by the new header - this is a temporary fix */
+@media(min-width: 992px){
+    .badge-success {
+        margin-top: 24px;
+    }
+}
 
 .btn-primary {
   font-family: 'Lato', sans-serif;
