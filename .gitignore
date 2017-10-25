@@ -2,3 +2,4 @@
 *.sass-cache
 app/dist/*
 app/tmp/*
+node_modules
