@@ -257,7 +257,7 @@ ul {
   width: 0;
   height: 0;
   border-top: 80px solid transparent;
-  border-right: 30px solid white;
+  border-right: 100vw solid white;
 }
 .cut-bottom {
   content: ' ';
@@ -268,7 +268,7 @@ ul {
   width: 0;
   height: 0;
   border-bottom: 80px solid transparent;
-  border-left: 30px solid white;
+  border-left: 100vw solid white;
 }
 
 .cut-top-left {
@@ -281,7 +281,7 @@ ul {
   border-style: solid;
   top: 0;
   right: 0;
-  border-width: 0 900px 80px 0;
+  border-width: 0 100vw 80px 0;
   border-color: transparent #fff transparent transparent;
 }
 
