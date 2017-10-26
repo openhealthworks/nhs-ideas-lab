@@ -20,10 +20,10 @@ require('./libs/jquery.waitforimages');
 
 require('./libs/css3-animate-it');
 
-// Simple sticky polyfill:
-// Use a hidden 'relative' clone to allow sibling layout computations
-// Use a visible 'fixed' clone to appear in the desired position
 void function stickyNav(){
+  // Simple sticky polyfill:
+  // Use a hidden 'relative' clone to allow sibling layout computations
+  // Use a visible 'fixed' clone to appear in the desired position
   var $original    = document.querySelector('.navbar')
   var $replacement = document.createDocumentFragment()
   var $fixed       = $replacement.appendChild($original.cloneNode(true))
@@ -38,6 +38,39 @@ void function stickyNav(){
   $ghost.setAttribute('aria-hidden', true)
 
   $original.parentNode.replaceChild($replacement, $original)
+
+  // Sticky navs mean that browsers can't scroll to the right position when targeting
+  // in-page anchors (they're at the top, but sticky stuff hides them)
+  var $links = document.querySelectorAll('a');
+
+  var $anchors = [].reduce.call(
+    document.querySelectorAll('[id]'),
+    function(collection, $anchor){
+      var $link = [].filter.call($links, function(a){return a.hash == '#' + $anchor.id}).pop()
+
+      if(!$link)
+        return
+
+      var $target = document.createElement('a')
+
+      $target.setAttribute('name', $anchor.id)
+
+      $target.style.display    = 'block'
+      $target.style.position   = 'absolute'
+      $target.style.visibility = 'hidden'
+      $target.style.height     = '1px'
+      $target.style.top        = '0px'
+
+      $anchor.style.position   = 'relative'
+
+      $anchor.appendChild($target)
+
+      $link.addEventListener('click', function(){
+        $target.style.marginTop = '-' + $fixed.offsetHeight + 'px'
+      })
+    },
+    []
+  )
 }()
 
 require('./functions');
