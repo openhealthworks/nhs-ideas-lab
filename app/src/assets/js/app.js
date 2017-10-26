@@ -52,8 +52,6 @@ require('./components/_lightSlider');
 
 require('./components/masonary'); // Masonary + isotope + portfolio filter
 
-require('./components/_heroSection');
-
 require('./components/_sidebar');
 
 require('./components/_overlay');
