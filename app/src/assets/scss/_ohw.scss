@@ -6,6 +6,7 @@
   font-family: 'Lato', sans-serif;
   background-color: $background-black !important;
   position: sticky;
+  z-index: 2;
 
   .xv-menuwrapper .dl-menu > li > a {
     font-weight: bold !important;
@@ -15,6 +16,10 @@
   }
   .xv-menuwrapper .dl-menu > li > .btn {
     background-color: $contrast-1 !important;
+  }
+
+  .paper-nav-toggle {
+    -webkit-appearance: none;
   }
 }
 
