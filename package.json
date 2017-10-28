@@ -27,7 +27,8 @@
     "gulp-uglifycss": "^1.0.6",
     "gulp-util": "^3.0.8",
     "gulp-webpack": "^1.5.0",
-    "gulp-zip": "^4.0.0"
+    "gulp-zip": "^4.0.0",
+    "mithril": "^1.1.5"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
