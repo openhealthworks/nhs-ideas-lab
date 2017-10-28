@@ -23,7 +23,7 @@ $.PaperPanel.options = {
     //Sidebar push menu toggle button selector
     sidebarToggleSelector: "[data-toggle='offcanvas']",
     //Activate sidebar push menu
-    sidebarPushMenu: true,
+    // sidebarPushMenu: true,
     navbarMenuSlimscrollWidth: "3px",
     sidebarSlimScroll: true,
     controlSidebarOptions: {

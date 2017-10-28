@@ -20,25 +20,35 @@ require('./libs/jquery.waitforimages');
 
 require('./libs/css3-animate-it');
 
+require('./components/menu');
+
+require('./components/xv-menu');
+
 // Simple sticky polyfill:
 // Use a hidden 'relative' clone to allow sibling layout computations
 // Use a visible 'fixed' clone to appear in the desired position
-void function stickyNav(){
-  var $original    = document.querySelector('.navbar')
-  var $replacement = document.createDocumentFragment()
-  var $fixed       = $replacement.appendChild($original.cloneNode(true))
-  var $ghost       = $replacement.appendChild($original.cloneNode(true))
+$('.navbar').each(function(index, fixed){
+  var $fixed = $(fixed)
 
-  $fixed.style.position   = 'fixed'
-  $fixed.style.width      = '100%'
+  $ghost = $fixed
+    .clone()
+    .css({
+      position   : 'relative',
+      visibility : 'hidden'
+    })
+    .attr({
+      'aria-hidden': true,
+      'tabindex': -1
+    })
 
-  $ghost.style.position   = 'relative'
-  $ghost.style.visibility = 'hidden'
-  $ghost.tabIndex         = -1
-  $ghost.setAttribute('aria-hidden', true)
+  $fixed
+    .css({
+      position : 'fixed',
+      width    : '100%'
+    })
+    .after($ghost)
+})
 
-  $original.parentNode.replaceChild($replacement, $original)
-}()
 
 require('./functions');
 
@@ -46,13 +56,12 @@ require('./scripts');
 
 require('./libs/animated-headline');
 
-require('./components/xv-menu');
 
 require('./components/_lightSlider');
 
 require('./components/masonary'); // Masonary + isotope + portfolio filter
 
-require('./components/_sidebar');
+// require('./components/_sidebar');
 
 require('./components/_overlay');
 

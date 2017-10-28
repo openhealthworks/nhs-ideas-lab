@@ -1,102 +1,128 @@
-$(function () {
-    $(document).click(function (e) {
-        var container = $("#previews-offcanvas, .js-previews-nav-toggle");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.js-previews-nav-toggle').addClass('paper-nav-white');
+// $(function () {
+//     $(document).click(function (e) {
+//         var container = $("#previews-offcanvas, .js-previews-nav-toggle");
+//         if (!container.is(e.target) && container.has(e.target).length === 0) {
+//             $('.js-previews-nav-toggle').addClass('paper-nav-white');
 
-            if ($('body').hasClass('offcanvas')) {
+//             if ($('body').hasClass('offcanvas')) {
 
-                $('body').removeClass('offcanvas');
-                $('.js-previews-nav-toggle').removeClass('active');
+//                 $('body').removeClass('offcanvas');
+//                 $('.js-previews-nav-toggle').removeClass('active');
 
+//             }
+
+//         }
+//     });
+
+// });
+var m = require('mithril')
+
+var Nav = {
+    oninit: function(component){
+        var widescreen = true
+
+        component.state = {
+            expanded : false,
+            get widescreen(){
+                return widescreen
+            },
+            set widescreen(value){
+                widescreen = value
+
+                component.state.expanded = false
             }
-
         }
-    });
+    },
 
-});
-$(function () {
+    view: function(component){
+        
+    }
+}
 
+m.mount(navWrapper, Nav)
 
-    $('#page').prepend('<div id="previews-offcanvas" />');
-    $('#page').prepend('<a href="#" class="js-previews-nav-toggle previews-nav-toggle previews-nav-white"><i></i></a>');
-    var clone1 = $('.menu-1 > ul').clone();
-    $('#previews-offcanvas').append(clone1);
-    var clone2 = $('.menu-2 > ul').clone();
-    $('#previews-offcanvas').append(clone2);
-
-    $('#previews-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
-    $('#previews-offcanvas')
-        .find('li')
-        .removeClass('has-dropdown');
-
-    // Hover dropdown menu on mobile
-    $('.offcanvas-has-dropdown').mouseenter(function () {
-        var $this = $(this);
-
-        $this
-            .addClass('active')
-            .find('ul')
-            .slideDown(500, 'easeOutExpo');
-    }).mouseleave(function () {
-
-        var $this = $(this);
-        $this
-            .removeClass('active')
-            .find('ul')
-            .slideUp(500, 'easeOutExpo');
-    });
+// $(function () {
 
 
-    $(window).resize(function () {
+//     $('#page').prepend('<div id="previews-offcanvas" />');
+//     $('#page').prepend('<a href="#" class="js-previews-nav-toggle previews-nav-toggle previews-nav-white"><i></i></a>');
+//     var clone1 = $('.menu-1 > ul').clone();
+//     $('#previews-offcanvas').append(clone1);
+//     var clone2 = $('.menu-2 > ul').clone();
+//     $('#previews-offcanvas').append(clone2);
 
-        if ($('body').hasClass('offcanvas')) {
+//     $('#previews-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
+//     $('#previews-offcanvas')
+//         .find('li')
+//         .removeClass('has-dropdown');
 
-            $('body').removeClass('offcanvas');
-            $('.js-previews-nav-toggle').removeClass('active');
+//     // Hover dropdown menu on mobile
+//     $('.offcanvas-has-dropdown').mouseenter(function () {
+//         var $this = $(this);
 
-        }
-    });
-});
+//         $this
+//             .addClass('active')
+//             .find('ul')
+//             .slideDown(500, 'easeOutExpo');
+//     }).mouseleave(function () {
 
-
-$(function () {
-
-
-    $('body').on('click', '.js-previews-nav-toggle', function (event) {
-        var $this = $(this);
-
-
-        if ($('body').hasClass('overflow offcanvas')) {
-            $('body').removeClass('overflow offcanvas');
-        } else {
-            $('body').addClass('overflow offcanvas');
-        }
-        $this.toggleClass('active');
-        event.preventDefault();
-
-    });
-});
-
-
-$(function () {
+//         var $this = $(this);
+//         $this
+//             .removeClass('active')
+//             .find('ul')
+//             .slideUp(500, 'easeOutExpo');
+//     });
 
 
-    $('.has-dropdown').mouseenter(function () {
+//     $(window).resize(function () {
 
-        var $this = $(this);
-        $this
-            .find('.dropdown')
-            .css('display', 'block')
-            .addClass('animated-fast fadeInUpMenu');
+//         if ($('body').hasClass('offcanvas')) {
 
-    }).mouseleave(function () {
-        var $this = $(this);
+//             $('body').removeClass('offcanvas');
+//             $('.js-previews-nav-toggle').removeClass('active');
 
-        $this
-            .find('.dropdown')
-            .css('display', 'none')
-            .removeClass('animated-fast fadeInUpMenu');
-    });
+//         }
+//     });
+// });
 
-});
+
+// $(function () {
+
+
+//     $('body').on('click', '.js-previews-nav-toggle', function (event) {
+//         var $this = $(this);
+
+
+//         if ($('body').hasClass('overflow offcanvas')) {
+//             $('body').removeClass('overflow offcanvas');
+//         } else {
+//             $('body').addClass('overflow offcanvas');
+//         }
+//         $this.toggleClass('active');
+//         event.preventDefault();
+
+//     });
+// });
+
+
+// $(function () {
+
+
+//     $('.has-dropdown').mouseenter(function () {
+
+//         var $this = $(this);
+//         $this
+//             .find('.dropdown')
+//             .css('display', 'block')
+//             .addClass('animated-fast fadeInUpMenu');
+
+//     }).mouseleave(function () {
+//         var $this = $(this);
+
+//         $this
+//             .find('.dropdown')
+//             .css('display', 'none')
+//             .removeClass('animated-fast fadeInUpMenu');
+//     });
+
+// });

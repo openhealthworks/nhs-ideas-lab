@@ -1,48 +1,87 @@
-require('.././libs/jquery.dlmenu');
+$('.navbar').each(function(index, navbar){
+    var $toggle  = $('.paper-nav-toggle', navbar)
+    var $large   = $('.xv-menuwrapper', navbar)
+    var $title   = $large.parent().prev()
+    var $header  = $large.parent().parent()
+    var expanded = false
+    var enlarged = true
 
-jQuery(function ($) {
-    "use strict";
-    var xv_ww = $(window).width(),
-        xv_slideshow = true;
+    var $small = $large.clone()
 
-    menuInit();
+    $small.addClass('xv-menuwrapper')
+    $small.removeClass('dl-menuwrapper')
 
-    // Check If Counter In Viewport
-    $(window).on('load resize', function () {
-        menuInit();
-    });
+    $large.before($small)
 
-    function menuInit() {
-        xv_ww = $(window).width();
-        if ($('.nav-offcanvas').length) {
-            $('.paper-nav-toggle').removeClass('dl-trigger');
+    $large.css({
+        position  : 'absolute',
+        right     : '0px',
+        transform : 'translateY(-50%)'
+    })
+        .children().css({
+            whiteSpace : 'nowrap'
+        })
+            .children().css({
+                display : 'inline-block',
+                float   : 'none'
+            })
+
+    maybeEnlarge()
+
+    $(document).on('click', function(e){
+        if(expanded || $toggle[0].contains(e.target))
+            maybeExpand()
+    })
+
+    $(window).on('resize', debounce(125, maybeEnlarge))
+
+    function maybeExpand(expand){
+        if(expand == undefined)
+            expand = !expanded
+
+        expanded = expand
+
+        $toggle
+            .attr('aria-expanded', expanded)
+            [expanded ? 'addClass' : 'removeClass']('dl-active')
+
+        $small.children().eq(0)[expanded ? 'addClass' : 'removeClass']('dl-menuopen')
+    }
+
+    function maybeEnlarge(){
+        var enlarge = $large.offsetWidth + $title.offsetWidth <= headerWidth()
+
+        enlarged = enlarge
+
+        if(enlarged){
+            maybeExpand(false)
+
+            $toggle.css( { display    : 'none'})
+            $small.css(  { display    : 'none'})
+            $large.css(  { visibility : ''})
         }
-
-        var desktopWidth = 1023;
-
-        if (($('.nav-offcanvas').length && xv_ww <= desktopWidth) || $('.nav-offcanvas-desktop').length) {
-            $('body').addClass('sidebar-collapse');
-            $('.dl-menu').addClass("dl-menuopen");
-            $('.paper-nav-toggle').removeClass('dl-trigger');
-            $('.nav-offcanvas .paper_menu').addClass('main-sidebar shadow1 fixed offcanvas');
-        } else {
-            $('.nav-offcanvas .paper_menu').removeClass('main-sidebar shadow1 fixed offcanvas');
-        }
-
-        if (xv_ww <= desktopWidth || $('.mini-nav').length) {
-            $('.responsive-menu').removeClass('xv-menuwrapper').addClass('dl-menuwrapper');
-            $('.user-avatar').removeClass('pull-right');
-            $('.lg-submenu').addClass("dl-submenu");
-        } else {
-            $('.responsive-menu').removeClass('dl-menuwrapper').addClass('xv-menuwrapper');
-            $('.lg-submenu').removeClass("dl-submenu");
-            $('.user-avatar').addClass('pull-right');
+        else {
+            $toggle.css( { display    : ''})
+            $small.css(  { display    : ''})
+            $large.css(  { visibility : 'hidden'})
         }
     }
-    $('#dl-menu').dlmenu({
-        animationClasses: {
-            classin: 'dl-animate-in-2',
-            classout: 'dl-animate-out-2'
-        }
-    });
-});
+
+    function headerWidth(){
+        var style = getComputedStyle($header.get(0))
+
+        return digitize(style.width) - digitize(style.paddingLeft) - digitize(style.paddingRight)
+    }
+})
+
+function debounce(delay, fn, defered){
+    return function debouncer(){
+        clearTimeout(defered)
+
+        defered = setTimeout(fn, delay)
+    }
+}
+
+function digitize(string){
+    return string.match(/\d+/)[0]
+}
