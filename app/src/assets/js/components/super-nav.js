@@ -97,10 +97,24 @@ function patch(e){
       'active': now.expanded
     })
   
-  $dropdown
-    .classNames({
-      'dl-menuopen dl-menu-toggle': now.expanded
-    })
+  var diff = now.expanded != before.expanded
+
+  if(diff){
+    clearTimeout(before.deferred)
+
+    $dropdown.addClass('dl-menu-toggle')
+
+    if(now.expanded)
+      $dropdown.addClass('dl-menuopen')
+    
+    before.deferred = setTimeout(function(){
+      if(!now.expanded)
+        $dropdown.removeClass('dl-menuopen')
+
+      if(diff)
+        $dropdown.removeClass('dl-menu-toggle')
+    }, 300)
+  }
   
   Object.assign(before, now)
 }
