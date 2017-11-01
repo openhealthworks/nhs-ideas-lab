@@ -12,7 +12,7 @@ $(document)
   .on('click', patch)
 
 $(window)
-  .on('resize', throttle(patch))
+  .on('resize', throttle(125, patch))
 
 function layout(){
   var $menu = $('#dl-menu')
@@ -106,11 +106,11 @@ function patch(e){
 
     if(now.expanded)
       $dropdown.addClass('dl-menuopen')
+
+    else
+      $dropdown.removeClass("dl-menuopen");
     
     before.deferred = setTimeout(function(){
-      if(!now.expanded)
-        $dropdown.removeClass('dl-menuopen')
-
       if(diff)
         $dropdown.removeClass('dl-menu-toggle')
     }, 300)
@@ -122,10 +122,10 @@ function patch(e){
 function throttle(delay, fn){
   var deferred
 
-  return function(){
+  return function(x){
     clearTimeout(deferred)
 
-    deferred = setTimeout(fn, delay)
+    deferred = setTimeout(fn.bind(this, x), delay)
   }
 }
 
