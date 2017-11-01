@@ -26,7 +26,9 @@ require('./scripts');
 
 require('./libs/animated-headline');
 
-require('./components/super-nav')
+require('./components/super-nav');
+
+require('./components/typewrighter');
 
 require('./components/_lightSlider');
 
