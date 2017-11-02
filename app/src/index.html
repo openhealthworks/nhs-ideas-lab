@@ -2,8 +2,10 @@
 <div id="app" class="paper-loading">
 
     <!-- partial -->
-    <!-- partial:partials/_header.html -->
-    <!-- partial -->
+    <div class="nav-absolute nav-sticky">
+      <!-- partial:partials/_header.html -->
+      <!-- partial -->
+  </div>
   <main>
     <section class="hero-video text-left p-b-0" id="top">
       <div class="container">
@@ -22,55 +24,74 @@
         <h3 class="fadeInUpShort animated go">
           A NEW WEEKEND HACKATHON
         </h3>
-
-        <div class="p-t-b-50 text-right fadeInUpShort animated go delay-500">
-          <a href="https://ti.to/nhs-ideas-lab/2017" target="new" class="btn btn-primary btn-big r-5 responsive-phone">
-            RESERVE YOUR PLACE NOW
-            <i class="icon icon-arrow-right"></i>
-          </a>
+          <section class="hero-video text-left p-b-0" id="top">
+            <div class="container">
+              <div class="p-b-0">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="p-t-b-10"><span class="badge badge-success s-18">JUST ANNOUNCED</span>
+                    </div>
+                    <div class="lightSlider slider_controls1 text-white" data-item="1" data-sm="1" data-loop="true"
+                    data-pager="false" data-pause="8000" data-controls="false" data-pauseonhover="true"
+                    data-auto="true">
+                    <div>
+                      <h1 class="s-128 bolder text-right fadeInUpShort animated go">{nhs.ideas.lab}</h1>
+                  </div>
+              </div>
+              <h3 class="fadeInUpShort animated go text-right">A NEW WEEKEND HACKATHON</h3>
+              <div class="p-t-b-50 text-right fadeInUpShort animated go"><a href="https://ti.to/nhs-ideas-lab/2017" target="new" class="btn-primary btn-big r-5">
+                RESERVE YOUR PLACE NOW <i class="icon icon-arrow-right"></i></a>
+            </div>
+            <div class="animatedParent animateOnce text-center">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-md-12">
+                      <div class="lightSlider" data-item="1" data-loop="true" data-pager="false" data-gallery="false" data-pause="4000" data-auto="false" data-controls="false">
+                        <div>
+                          <h4 class="fadeInUpShort animated go">25 & 26 NOVEMBER 2017, LONDON</h4>
+                          <br>
+                          <div class="counter-wrapper counter" data-date="November 25, 2017">
+                            <div><span class="days">317</span> <span class="count-type">days</span>
+                            </div>
+                            <div><span class="hours">04</span> <span class="count-type">hrs</span>
+                            </div>
+                            <div><span class="minutes">57</span> <span class="count-type">mins</span>
+                            </div>
+                            <div><span class="seconds">11</span> <span class="count-type">secs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="social m-b-50">
+                    <li class="twitter"><a href="https://twitter.com/nhsideaslab"><i class="icon icon-twitter"></i></a>
+                    </li>
+                    <li class="facebook"><a href="https://www.facebook.com/nhsideaslab"><i class="icon icon-facebook"></i></a>
+                    </li>
+                    <li class="linkedin"><a href="https://linkedin.com/in/nhsideaslab"><i class="icon icon-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        <div class="animatedParent animateOnce text-center">
-          <h4 class="fadeInUpShort animated go delay-750">25 &amp; 26 NOVEMBER 2017, LONDON</h4>
+<!-- COMMENT APPROPRIATELY FOR VIDEO OR STATIC IMG -->
+<div class="video-background">
+    <div class="video-foreground">
+      <video autoplay muted loop>
+        <source src="assets/videos/recolour-test-android-720-preset.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+    <!--    <div class="overlay" data-start="#1d3e39" data-end="#221122" data-orientation="toleft"
+        data-opacity=".8"></div>. -->
+        <!-- END COMMENT -->
 
-          <br>
-
-          <div class="counter-wrapper counter" data-date="November 25, 2017">
-            <div>
-              <span class="days">317</span> <span class="count-type">days</span>
-            </div>
-            <div>
-              <span class="hours">04</span> <span class="count-type">hrs</span>
-            </div>
-            <div>
-              <span class="minutes">57</span> <span class="count-type">mins</span>
-            </div>
-            <div>
-              <span class="seconds">11</span> <span class="count-type">secs</span>
-            </div>
-          </div>
-
-          <ul class="social m-b-50">
-              <li class="twitter"><a href="https://twitter.com/nhsideaslab"><i class="icon icon-twitter"></i></a>
-              </li>
-              <li class="facebook"><a href="https://www.facebook.com/nhsideaslab"><i class="icon icon-facebook"></i></a>
-              </li>
-              <li class="linkedin"><a href="https://linkedin.com/in/nhsideaslab"><i class="icon icon-linkedin"></i></a>
-              </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="video-background">
-        <div class="video-foreground">
-          <img src="assets/img/basic/video-background-still-2.jpg" />
-          <video autoplay muted loop>
-            <source src="assets/videos/recolour-test-android-720-preset.mp4" type="video/mp4">
-            </video>
-        </div>
-      </div>
     </section>
-
     <div class="relative">
         <div class="cut cut-bottom"></div>
     </div>
@@ -93,7 +114,7 @@
               <div class="service-content">
                   <h2>WHAT</h2>
                   <p>{nhs.ideas.lab} is a new and <b>free weekend hackathon</b> for projects that aim to improve patient health and care. People from across all healthcare sectors will work together to share learning and make things better.</p>
-                  <p>Ongoing <b>advice and networking</b> will be available after the weekend to encourage Social Enterprises surrounding new {nhs.ideas.lab} projects.</p>
+                  <p>Ongoing support will be available after the weekend to encourage Social Enterprises surrounding new {nhs.ideas.lab} projects.</p>
                   <p class="text"><a href="#benefits">Read more...</a></p>
               </div>
           </div>
@@ -120,7 +141,7 @@
               </div>
           </div>
       </div>
-
+    
 </div>
 <div class="row final">
   <div class="col-lg-6">
@@ -205,7 +226,7 @@
               <div class="service-icon"><i class="icon icon-attach_money" aria-hidden="true"></i>
               </div>
               <div class="service-content">
-                <h3>Followup and support</h3>
+                <h3>Followup and funding</h3>
                 <p>Keep us updated about your {nhs.ideas.lab} project after the event and we can help you to keep things moving forward</p>
                 <p><a href="#faqs">Read more...</a></p>
             </div>
@@ -298,14 +319,14 @@
                     <div class="p-t-40 p-b-80">
                       <h5>TBC</h5>
                       <p></p>
-
+                      
                   </div>
                 </li>
                 <li data-thumb="assets/img/dummy/u5.png">
                     <div class="p-t-40 p-b-80">
                       <h5>TBC</h5>
                       <p></p>
-
+                      
                   </div>
                 </li>
               </ul>
@@ -462,7 +483,7 @@
 </div>
 <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5">
   <div class="card-block">
-    <p>The {nhs.ideas.lab} is an exciting new event series supported by the <a href="http://www.innovation.england.nhs.uk/en/clinical-entrepreneur">NHS England Clinical Entrepreneur Programme</a> and sponsored by <a href="https://www.boehringer-ingelheim.co.uk/">Boehringer Ingelheim Ltd</a>. Projects that start at {nhs.ideas.lab} will be able to benefit from advice and networking from the {nhs.ideas.lab} team if they continue after the weekend, offering huge potential for effecting real change in the healthcare and technology industries.
+    <p>The {nhs.ideas.lab} is an exciting new event series supported by the <a href="http://www.innovation.england.nhs.uk/en/clinical-entrepreneur">NHS England Clinical Entrepreneur Programme</a> and organised by <a href="https://www.boehringer-ingelheim.co.uk/">Boehringer Ingelheim Ltd</a>. Projects that start at {nhs.ideas.lab} will be able to benefit from support from the {nhs.ideas.lab} team if they continue after the weekend, offering huge potential for effecting real change in the healthcare and technology industries.
     </p>
 </div>
 </div>
@@ -494,7 +515,7 @@
 </div>
 <div id="collapse7" class="collapse" role="tabpanel" aria-labelledby="heading7">
     <div class="card-block">
-      <p>Yes: you can find it <a href="codeofconduct.html">here</a>. All attendees, staff, mentors, panel members, sponsors and indeed people in general at {nhs.ideas.lab} are required to comply with our Code of Conduct.</p>
+      <p>Yes: you can find it <a href="codeofconduct.html">here</a>. All attendees, staff, mentors, panel members, supporters and indeed people in general at {nhs.ideas.lab} are required to comply with our Code of Conduct.</p>
   </div>
 </div>
 </div>
@@ -570,7 +591,7 @@
 </div>
 <div id="collapse11" class="collapse" role="tabpanel" aria-labelledby="heading11">
     <div class="card-block">
-      <p>No! We'd love you to bring a problem or idea to pitch, and we encourage you to feel comfortable sharing your thoughts with our community of like-minded people, but you absolutely don't have to. It's fine to decide what you'd like to work on after hearing all the pitches, and in fact most attendees will do this. If you want to discuss your idea, or how to pitch, or if you want someone else to pitch your idea for you, then please get in touch before the event (email <a href="mailto:hello@nhsideaslab.com">hello@nhsideaslab.com</a>) and one of our team will be happy to help you.</p>
+      <p>No! We'd love you to bring a problem or idea to pitch, and we encourage you to feel comfortable sharing your thoughts with our community of like-minded people, but you absolutely don't have to. It's fine to decide what you'd like to work on afte hearing all the pitches, and in fact most attendees will do this. If you want to discuss your idea, or how to pitch, or if you want someone else to pitch your idea for you, then please get in touch before the event (email <a href="mailto:hello@nhsideaslab.com">hello@nhsideaslab.com</a>) and one of our team will be happy to help you.</p>
   </div>
 </div>
 </div>
@@ -719,7 +740,7 @@
     </div> !--row--
     </div> !--inner container--
     </div> !--outer container--
--->
+-->  
 
     </section>
 <!--FAQ 3 Section End-->
@@ -784,10 +805,10 @@
       <a data-toggle="collapse" data-parent="#accordion" href="#collapse23"
       aria-expanded="true" aria-controls="collapse23">
       Why is an NHS England division supporting a hackathon that is organised by a pharma company?
-      </a>
-    </span>
-  </div>
-  <div id="collapse23" class="collapse" role="tabpanel" aria-labelledby="heading23">
+  </a>
+</span>
+</div>
+<div id="collapse23" class="collapse" role="tabpanel" aria-labelledby="heading23">
     <div class="card-block">
       <p>The NHS Clinical Entrepreneur Programme has a good working relationship with several commercial enterprises, including Boehringer Ingelheim Ltd, who share their interest in clinical innovation to improve patient care. One of Boehringer Ingelheim Ltd's core principles is to support health in the community, particularly for chronic health conditions. Partnering in this way allows the NHS Clinical Entrepreneur Programme additional funds and industry expertise to deliver a high-quality hackathon series with the potential to effect real change to the state of healthcare technology.</p>
     </div>
@@ -799,16 +820,16 @@
       <a data-toggle="collapse" data-parent="#accordion" href="#collapse24"
       aria-expanded="true" aria-controls="collapse24">
       How can Conflicts of Interest be avoided when a commercial company is organising a public-sector hackathon?
-      </a>
-    </span>
-  </div>
+  </a>
+</span>
+</div>
 <div id="collapse24" class="collapse" role="tabpanel" aria-labelledby="heading24">
-  <div class="card-block">
-    <p>Boehringer Ingelheim Ltd’s support of {nhs.ideas.lab} complies with its own legal framework that prohibits: commercial interest; product placement/reference; inducement; any kind of influence over or stake in projects, ideas or any other outcome of the hackathon.</p>
-    <p>No party will have any stake in or control over Intellectual Property generated by the event<!--, and the Access to Innovation fund is for Social Enterprise use only -->: the only motivation for running {nhs.ideas.lab} is to enhance patient care.</p>
-    <p>{nhs.ideas.lab} will be delivered by Open Health Works, a not-for-profit healthcare technology consulting company.</p>
-    <p>Boehringer Ingelheim Ltd, NHS England and Open Health Works Ltd will collaborate to plan, run and write up the {nhs.ideas.lab} hackathon with the highest standards of Open Governance and transparency.</p>
-    <p>For more information please email <a href="mailto:hello@nhsideaslab.com">hello@nhsideaslab.com</a>.</p>
+    <div class="card-block">
+      <p>Boehringer Ingelheim Ltd’s support of {nhs.ideas.lab} complies with its own legal framework that prohibits: commercial interest; product placement/reference; inducement; any kind of influence over or stake in projects, ideas or any other outcome of the hackathon.</p>
+      <p>No party will have any stake in or control over Intellectual Property generated by the event<!--, and the Access to Innovation fund is for Social Enterprise use only -->: the only motivation for running {nhs.ideas.lab} is to enhance patient care.</p>
+      <p>{nhs.ideas.lab} will be delivered by Open Health Works, a not-for-profit healthcare technology consulting company.</p>
+      <p>Boehringer Ingelheim Ltd, NHS England and Open Health Works Ltd will collaborate to plan, run and write up the {nhs.ideas.lab} hackathon with the highest standards of Open Governance and transparency.</p>
+      <p>For more information please email <a href="mailto:hello@nhsideaslab.com">hello@nhsideaslab.com</a>.</p>
   </div>
 </div>
 </div>
@@ -912,7 +933,7 @@
 </div>
 </section>
 -->
-<!-- End contact form -->
+<!-- End contact form --> 
 
 <!-- News Letter -->
 <section class="newsletter p-t-b-50">
