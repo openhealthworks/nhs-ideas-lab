@@ -85,7 +85,7 @@
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgba(0, 0, 0, 0.5); /* The typwriter cursor */
+  border-right: .135em solid; /* The typwriter cursor */
   display: inline-block;
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -93,7 +93,7 @@
   .glyph {
     display: inline-block;
     text-align: center;
-    width: 1ex;
+    width: 0.48em;
   }
 }
 
@@ -106,7 +106,7 @@
 /* The typing effect */
 @keyframes typing {
   from {
-    width: 0
+    width: 0%
   }
   to {
     width: 100%
@@ -119,6 +119,6 @@
     border-color: transparent
   }
   50% {
-    border-color: white;
+    border-color: rgba(85, 85, 85, 0.6);
   }
 }
