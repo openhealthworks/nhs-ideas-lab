@@ -245,17 +245,17 @@
   background-color: $bright !important;
   text-transform: uppercase;
 }
-.newsletter {
-  background-color: $background-mid !important;
-   h1 {
+.headline {
+  h2 {
     color: $title-2;
     font-family: 'Oswald', sans-serif !important;
-    font-weight: 700;
-    font-size: 3em;
-    line-height: 0em;
+    font-weight: 400 !important;
   }
+}
+.newsletter {
+  background-color: $background-mid !important;
   h2 {
-    color: $title-4;
+    color: $title-1;
     font-family: 'Oswald', sans-serif !important;
     font-weight: 400 !important;
   }
@@ -283,7 +283,7 @@ footer .brand img {
 footer .social {
   padding: 0 10px 0 10px;
   li {
-    margin: 5px 10px;
+    margin: 5px 2px;
   }
 }
 
@@ -417,6 +417,11 @@ ul.iconList li:before {
   right: 25%;
 }
 
+.hero-video {
+  height: 50vh;
+  padding: 0px;
+}
+
 @include tablet-and-phone { // Basically all a massive hack
   .reorder-responsive {
     display: table;
@@ -454,4 +459,6 @@ ul.iconList li:before {
   }
 }
 
-
+.email {
+  background: #ea4c89;
+}
